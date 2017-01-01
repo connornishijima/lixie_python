@@ -32,7 +32,7 @@ Confirm you're ready to start, and the installer will take care of all fetching,
 
 # Getting Started
 
-Usage is **alomst** identical to the Arduino version, with only two differences:
+Usage is ***almost*** identical to the Arduino version, with only two differences:
 
 - **lix.begin()** now has a parameter - the number of Lixies in your setup. If you have 3 digits, your line is **lix.begin(3)**.
 - Lixie **must** use BCM GPIO 18. This is GPIO1 in RPi.GPIO, or physical pin 12. This is the only pin capable of driving WS2812B LEDs. See the Fritzing diagram above.
