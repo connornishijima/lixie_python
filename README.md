@@ -6,7 +6,7 @@ Python module for driving Lixie Displays!
 
 Before installing, connect your first Lixie like this:
 
-    WIRING IMAGE
+![Wiring diagram](http://i.imgur.com/PyvOyog.png)
 
 I've done my best to make this extremely easy - just enter the following one-liner into a Raspberry Pi command line:
 
