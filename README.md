@@ -1,6 +1,6 @@
 # Lixie-Python
 
-Python module for driving Lixie Displays!
+Python module for driving Lixie Displays! This will be kept up-to-date with functions the Arduino library has!
 
 # Installation
 
@@ -29,3 +29,19 @@ The fetches the installer script from this repository and starts it. You'll see 
     Ready to go? (y/n)
 
 Confirm you're ready to start, and the installer will take care of all fetching, compiling, and dependencies. This make take up to 30 minutes if your Raspbian is out of date. Upon finishing, the script will self-import the new library and display a counting animation on your displays!
+
+# Getting Started
+
+Usage is **alomst** identical to the Arduino version, with only two differences:
+
+- **lix.begin()** now has a parameter - the number of Lixies in your setup. If you have 3 digits, your line is **lix.begin(3)**.
+- Lixie **must** use BCM GPIO 18. This is GPIO1 in RPi.GPIO, or physical pin 12. This is the only pin capable of driving WS2812B LEDs. See the Fritzing diagram above.
+
+Here is the bare minimum to get started:
+
+    import lixie as lix    
+    
+    lix.begin(4)
+    lix.write(1234)
+    
+This will write "1234" to the 4 displays defined, or "34" if you have two displays, or just "4" if you've only one.
